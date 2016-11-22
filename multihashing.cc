@@ -76,7 +76,7 @@ void quark(const FunctionCallbackInfo<Value>& args) {
 		return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -112,7 +112,7 @@ void x11(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
 	return;
 }
@@ -148,7 +148,7 @@ void x5(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -157,7 +157,7 @@ void scrypt(const FunctionCallbackInfo<Value>& args) {
 
    if (args.Length() < 3)
 	{
-        args.GetReturnValue().Set(10);
+        args.GetReturnValue().Set(except("You must provide buffer to hash, N value, and R value"));
 		return;
 	}
 
@@ -165,7 +165,7 @@ void scrypt(const FunctionCallbackInfo<Value>& args) {
 
    if(!Buffer::HasInstance(target))
 	{
-       args.GetReturnValue().Set(11);
+       args.GetReturnValue().Set(except("Argument should be a buffer object."));
 		return;
 	}
 
@@ -189,7 +189,7 @@ void scrypt(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -225,7 +225,7 @@ void neoscrypt_hash(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -269,7 +269,7 @@ void scryptn(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -317,7 +317,7 @@ void scryptjane(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -351,7 +351,7 @@ void yescrypt(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -387,7 +387,7 @@ void keccak(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -422,7 +422,7 @@ void bcrypt(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -458,7 +458,7 @@ void skein(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -495,7 +495,7 @@ void groestl(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -532,7 +532,7 @@ void groestlmyriad(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -569,7 +569,7 @@ void blake(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -605,7 +605,7 @@ void dcrypt(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -641,7 +641,7 @@ void fugue(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -678,7 +678,7 @@ void qubit(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -714,7 +714,7 @@ void s3(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -750,7 +750,7 @@ void hefty1(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -787,7 +787,7 @@ void shavite3(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -837,7 +837,7 @@ void cryptonight(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -873,7 +873,7 @@ void x13(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -909,7 +909,7 @@ void x14(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -968,7 +968,7 @@ void boolberry(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -1004,7 +1004,7 @@ void nist5(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -1040,7 +1040,7 @@ void sha1(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -1076,7 +1076,7 @@ void x15(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -1112,7 +1112,7 @@ void fresh(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -1148,7 +1148,7 @@ void jh(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
@@ -1184,7 +1184,7 @@ void c11(const FunctionCallbackInfo<Value>& args) {
         return;
     }
 
-    Local<Object> lbuff = buff.ToLocalChecked();
+    Local<Value> lbuff = buff.ToLocalChecked();
     args.GetReturnValue().Set(lbuff);
     return;
 }
